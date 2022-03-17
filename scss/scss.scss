@@ -1,0 +1,299 @@
+@import "var";
+@import "mixins";
+
+
+@include body;
+
+main{
+    background-image: url('../slike/background_raw.jpg');
+    background-size: cover;
+    height: 100vh;
+    @include clearfix;
+    h1{
+        display: inline-block;
+        padding-top: 1em;
+        padding-right: 1em;
+        width: 52%;
+        font-size: 4.6em;
+        line-height: 1.4em;
+        font-weight: normal;
+          
+        .red{
+            color: $bojaprim;
+            font-family: $fontprim;
+        }
+    }
+}
+header{
+    height: 55px;
+    background-color: rgba($color: $bojasek, $alpha: 0.7);
+     vertical-align: middle;  
+     @include clearfix;   
+}
+
+.sadrzaj{
+    width: 60%;
+    margin: 0.1em auto;
+}
+    .logo{
+        float:left;
+        padding-right: 70px;
+        padding-top: 0.3em;
+        a{
+            img{ 
+            border: 1px solid $bojater;
+            border-radius: 12px;
+            width: 40px;
+            height: 40px;  
+            }
+
+            h2{
+                display: none;
+                color: $bojater;
+            }   
+        }
+    }
+    
+    nav{
+        float: left;
+        .dropdown{
+            display: none;
+        }
+        ul{
+
+            list-style: none;
+            li{
+                display: inline-block;
+                padding-right: 20px;
+                padding-left: 20px;
+                text-align: center;
+                &:hover{
+                        text-decoration: underline;
+                        background-color: $bojaprim;
+                }
+                a{
+                    text-decoration: none;
+                    line-height: 3em;
+                    text-transform: uppercase;
+                    color: $bojater;
+                    font-family: $fontprim;
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+
+
+section{
+    background-color: $bojater; 
+    @include clearfix;
+    width: 100%;
+    h1{
+        color: $bojaprim;
+        font-size: 2em;
+        text-align: center;
+        padding-top: 2em; 
+        padding-bottom: 1em; 
+       
+    }
+}
+.meso{ 
+    width: 80%;
+    margin: 0.5em auto;
+    padding-bottom: 2em;
+    .col{
+        a{
+            text-decoration: none;
+            display: inline-block;
+            padding-bottom: 0.5em;
+            &:hover{
+                background-color: $bojaprim;
+                
+                img{
+                    background-color: $bojasek;
+                }
+                .info{
+                    h2, p{ color: white;}
+                }
+            }
+            img{
+                background-color: $bojaprim;
+                border-radius: 10px;
+                width: 150px;
+                padding: 0.9em 0.8em;
+                margin-top: 0.5em;
+                margin-left: .5em;
+            }
+        }  
+    }
+    .col1, .col3 {
+    a{ 
+        .info{
+            
+            width: 80%;
+            padding-top: 2.5em;
+            float: right;
+            text-align: right;
+            padding-right: 0.5em;
+        }
+        img{
+            float: left;
+        }
+    }
+}
+    .col2{
+        a{
+            .info{
+                
+                width: 80%;
+                padding-top: 2.5em;
+                float: left;
+                text-align: left;
+                padding-left: 0.5em;
+            }
+            img{
+                margin-right: .5em;
+                float: right;
+            }
+        }
+    }
+}
+
+
+.navigacija{
+    background-color: $bojasek;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 5em;
+    padding-bottom: 1em;
+    
+
+    h1{ 
+    font-size: 2em;
+    text-align: center;
+    padding-top: 2em; 
+    padding-bottom: 1em; 
+    color: $bojater;
+    }
+    h3{
+        font-size: 1.2em;
+        color: $bojater;
+        font-family: $fontprim;
+        text-transform: uppercase;
+    }
+    p, address{
+        font-size: 0.7em;
+        color: $bojater;
+        width:95%;
+        text-align: justify;
+    }
+    .map{
+        display: inline;
+    }
+    .column{
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 3em;
+        margin-right: 1em;
+    
+    }
+    .col1{
+        width: 30%;
+
+
+        h3{
+            border-bottom: 1px solid $bojater;
+    
+        }
+        p{
+            padding-top: 3em;
+            line-height: 1.4em;
+        }
+        address{
+            padding-top: 3em;
+        }
+
+    }
+    .col2{
+        width: 20%;
+        margin-left: 2em;
+        h3{
+            border-bottom: 1px solid $bojater;
+        }
+        ul{
+            display: inline-block; 
+            padding-top: 1.5em;
+            li{
+               
+               list-style:square;
+               margin-left: 1.1em;
+               color: $bojater;
+               a{
+                   color: $bojater;
+                   text-decoration: none;
+                   line-height: 1em;
+                   font-size: .8em;
+               }
+            }
+        }
+
+    }
+    
+}
+
+footer{
+        width: 100%;
+        background-color: $bojater;
+        height: 3em;
+        @include clearfix;
+        display: inline-block;
+        text-align: center;
+       
+
+
+}
+.logof{ 
+        margin-top: .6em;  
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+       img{      
+           float:left;
+           width: 30px;
+           height: 30px;   
+       }
+       h2{
+           float:left;
+           padding-left: .4em;
+       }
+    
+    .copy{
+        float: left;
+        
+        
+        
+        
+
+    }
+  }
+
+@include d1300;
+@include d1200;
+@include d1030;
+@include t760;
+@include m620;
+
+
+    
+
+
+    
+
+
+
+
+
+
+  
+
